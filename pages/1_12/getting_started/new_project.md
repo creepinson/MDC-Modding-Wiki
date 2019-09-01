@@ -5,6 +5,30 @@ Setting up a new modding environment is easy to do. You can find the
 [Getting Started with Forge here](https://mcforge.readthedocs.io/en/latest/gettingstarted/)
 (which you'll find is rather similar to this page).
 
+### Getting the JDK
+If you do not already have a JDK (Java Development Kit) installed on your system, you can download the appropriate version for your [operating system here](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). 
+You can accept the license, and then you can choose the downloaded file based on what operating system you have installed. 
+The next step to installing the JDK for the first time is to add the JAVA_HOME variable to your PATH.
+On Linux and Mac, you can do this by running the following commands in Terminal. Replace the 'jdk-install-dir' with the location where you installed the JDK.
+```
+export JAVA_HOME=jdk-install-dir
+export PATH=$JAVA_HOME/bin:$PATH
+```
+On Windows, you can easily open the command prompt by pressing the WIN (windows) key on your keyboard, and while holding the WIN key down, pressing R on your keyboard. Then type 'cmd' in the box the comes up on your screen and press ENTER. Next, you can set JAVA_HOME by doing the following:
+
+* Right click THIS PC in Windows File Explorer and select Properties.
+* Click ADVANCED SYSTEM SETTINGS.
+* On the Advanced tab, select Environment Variables, and then add a new SYSTEM enviroment variable named JAVA_HOME to point to where the JDK software is located, for example, C:\Program Files\Java\jdk1.6.0_02.
+
+You can find out where you installed the JDK by running the following command if you are on WINDOWS:
+```
+for %i in (java.exe) do @echo.   %~$PATH:i
+```
+If you are Mac or Linux, you can do this by running this command
+```
+which java
+```
+
 ### Getting the MDK
 
 First of all, you'll need to get yourself a Forge MDK from the official Forge site:
